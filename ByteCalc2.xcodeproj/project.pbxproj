@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC82A86519C53BEE00FAAED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86419C53BEE00FAAED7 /* Foundation.framework */; };
+		EC82A86719C53BEE00FAAED7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86619C53BEE00FAAED7 /* CoreGraphics.framework */; };
+		EC82A86919C53BEE00FAAED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86819C53BEE00FAAED7 /* UIKit.framework */; };
+		EC82A86F19C53BEE00FAAED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC82A86D19C53BEE00FAAED7 /* InfoPlist.strings */; };
+		EC82A87119C53BEE00FAAED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87019C53BEE00FAAED7 /* main.m */; };
+		EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87419C53BEE00FAAED7 /* AppDelegate.m */; };
+		EC82A87819C53BEE00FAAED7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */; };
+		EC82A87B19C53BEE00FAAED7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87919C53BEE00FAAED7 /* Main_iPad.storyboard */; };
+		EC82A87E19C53BEE00FAAED7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87D19C53BEE00FAAED7 /* ViewController.m */; };
+		EC82A88019C53BEE00FAAED7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87F19C53BEE00FAAED7 /* Images.xcassets */; };
+		EC82A88719C53BEE00FAAED7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A88619C53BEE00FAAED7 /* XCTest.framework */; };
+		EC82A88819C53BEE00FAAED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86419C53BEE00FAAED7 /* Foundation.framework */; };
+		EC82A88919C53BEE00FAAED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86819C53BEE00FAAED7 /* UIKit.framework */; };
+		EC82A89119C53BEE00FAAED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC82A88F19C53BEE00FAAED7 /* InfoPlist.strings */; };
+		EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC82A88A19C53BEE00FAAED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC82A85919C53BEE00FAAED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC82A86019C53BEE00FAAED7;
+			remoteInfo = ByteCalc2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC82A86119C53BEE00FAAED7 /* ByteCalc2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCalc2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC82A86419C53BEE00FAAED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC82A86619C53BEE00FAAED7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC82A86819C53BEE00FAAED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC82A86C19C53BEE00FAAED7 /* ByteCalc2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ByteCalc2-Info.plist"; sourceTree = "<group>"; };
+		EC82A86E19C53BEE00FAAED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC82A87019C53BEE00FAAED7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC82A87219C53BEE00FAAED7 /* ByteCalc2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ByteCalc2-Prefix.pch"; sourceTree = "<group>"; };
+		EC82A87319C53BEE00FAAED7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC82A87419C53BEE00FAAED7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC82A87719C53BEE00FAAED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		EC82A87A19C53BEE00FAAED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		EC82A87C19C53BEE00FAAED7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC82A87D19C53BEE00FAAED7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC82A87F19C53BEE00FAAED7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC82A88519C53BEE00FAAED7 /* ByteCalc2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ByteCalc2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC82A88619C53BEE00FAAED7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC82A88E19C53BEE00FAAED7 /* ByteCalc2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ByteCalc2Tests-Info.plist"; sourceTree = "<group>"; };
+		EC82A89019C53BEE00FAAED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ByteCalc2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC82A85E19C53BEE00FAAED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A86719C53BEE00FAAED7 /* CoreGraphics.framework in Frameworks */,
+				EC82A86919C53BEE00FAAED7 /* UIKit.framework in Frameworks */,
+				EC82A86519C53BEE00FAAED7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC82A88219C53BEE00FAAED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A88719C53BEE00FAAED7 /* XCTest.framework in Frameworks */,
+				EC82A88919C53BEE00FAAED7 /* UIKit.framework in Frameworks */,
+				EC82A88819C53BEE00FAAED7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC82A85819C53BEE00FAAED7 = {
+			isa = PBXGroup;
+			children = (
+				EC82A86A19C53BEE00FAAED7 /* ByteCalc2 */,
+				EC82A88C19C53BEE00FAAED7 /* ByteCalc2Tests */,
+				EC82A86319C53BEE00FAAED7 /* Frameworks */,
+				EC82A86219C53BEE00FAAED7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC82A86219C53BEE00FAAED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A86119C53BEE00FAAED7 /* ByteCalc2.app */,
+				EC82A88519C53BEE00FAAED7 /* ByteCalc2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC82A86319C53BEE00FAAED7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A86419C53BEE00FAAED7 /* Foundation.framework */,
+				EC82A86619C53BEE00FAAED7 /* CoreGraphics.framework */,
+				EC82A86819C53BEE00FAAED7 /* UIKit.framework */,
+				EC82A88619C53BEE00FAAED7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC82A86A19C53BEE00FAAED7 /* ByteCalc2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A87319C53BEE00FAAED7 /* AppDelegate.h */,
+				EC82A87419C53BEE00FAAED7 /* AppDelegate.m */,
+				EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */,
+				EC82A87919C53BEE00FAAED7 /* Main_iPad.storyboard */,
+				EC82A87C19C53BEE00FAAED7 /* ViewController.h */,
+				EC82A87D19C53BEE00FAAED7 /* ViewController.m */,
+				EC82A87F19C53BEE00FAAED7 /* Images.xcassets */,
+				EC82A86B19C53BEE00FAAED7 /* Supporting Files */,
+			);
+			path = ByteCalc2;
+			sourceTree = "<group>";
+		};
+		EC82A86B19C53BEE00FAAED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A86C19C53BEE00FAAED7 /* ByteCalc2-Info.plist */,
+				EC82A86D19C53BEE00FAAED7 /* InfoPlist.strings */,
+				EC82A87019C53BEE00FAAED7 /* main.m */,
+				EC82A87219C53BEE00FAAED7 /* ByteCalc2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC82A88C19C53BEE00FAAED7 /* ByteCalc2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */,
+				EC82A88D19C53BEE00FAAED7 /* Supporting Files */,
+			);
+			path = ByteCalc2Tests;
+			sourceTree = "<group>";
+		};
+		EC82A88D19C53BEE00FAAED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC82A88E19C53BEE00FAAED7 /* ByteCalc2Tests-Info.plist */,
+				EC82A88F19C53BEE00FAAED7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC82A86019C53BEE00FAAED7 /* ByteCalc2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC82A89619C53BEE00FAAED7 /* Build configuration list for PBXNativeTarget "ByteCalc2" */;
+			buildPhases = (
+				EC82A85D19C53BEE00FAAED7 /* Sources */,
+				EC82A85E19C53BEE00FAAED7 /* Frameworks */,
+				EC82A85F19C53BEE00FAAED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ByteCalc2;
+			productName = ByteCalc2;
+			productReference = EC82A86119C53BEE00FAAED7 /* ByteCalc2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC82A88419C53BEE00FAAED7 /* ByteCalc2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC82A89919C53BEE00FAAED7 /* Build configuration list for PBXNativeTarget "ByteCalc2Tests" */;
+			buildPhases = (
+				EC82A88119C53BEE00FAAED7 /* Sources */,
+				EC82A88219C53BEE00FAAED7 /* Frameworks */,
+				EC82A88319C53BEE00FAAED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC82A88B19C53BEE00FAAED7 /* PBXTargetDependency */,
+			);
+			name = ByteCalc2Tests;
+			productName = ByteCalc2Tests;
+			productReference = EC82A88519C53BEE00FAAED7 /* ByteCalc2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC82A85919C53BEE00FAAED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = DaedalusApps;
+				TargetAttributes = {
+					EC82A88419C53BEE00FAAED7 = {
+						TestTargetID = EC82A86019C53BEE00FAAED7;
+					};
+				};
+			};
+			buildConfigurationList = EC82A85C19C53BEE00FAAED7 /* Build configuration list for PBXProject "ByteCalc2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC82A85819C53BEE00FAAED7;
+			productRefGroup = EC82A86219C53BEE00FAAED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC82A86019C53BEE00FAAED7 /* ByteCalc2 */,
+				EC82A88419C53BEE00FAAED7 /* ByteCalc2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC82A85F19C53BEE00FAAED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A87B19C53BEE00FAAED7 /* Main_iPad.storyboard in Resources */,
+				EC82A88019C53BEE00FAAED7 /* Images.xcassets in Resources */,
+				EC82A87819C53BEE00FAAED7 /* Main_iPhone.storyboard in Resources */,
+				EC82A86F19C53BEE00FAAED7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC82A88319C53BEE00FAAED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A89119C53BEE00FAAED7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC82A85D19C53BEE00FAAED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A87E19C53BEE00FAAED7 /* ViewController.m in Sources */,
+				EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */,
+				EC82A87119C53BEE00FAAED7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC82A88119C53BEE00FAAED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC82A88B19C53BEE00FAAED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC82A86019C53BEE00FAAED7 /* ByteCalc2 */;
+			targetProxy = EC82A88A19C53BEE00FAAED7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC82A86D19C53BEE00FAAED7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC82A86E19C53BEE00FAAED7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC82A87719C53BEE00FAAED7 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		EC82A87919C53BEE00FAAED7 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC82A87A19C53BEE00FAAED7 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		EC82A88F19C53BEE00FAAED7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC82A89019C53BEE00FAAED7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC82A89419C53BEE00FAAED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC82A89519C53BEE00FAAED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC82A89719C53BEE00FAAED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
+				INFOPLIST_FILE = "ByteCalc2/ByteCalc2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC82A89819C53BEE00FAAED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
+				INFOPLIST_FILE = "ByteCalc2/ByteCalc2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EC82A89A19C53BEE00FAAED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ByteCalc2.app/ByteCalc2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ByteCalc2Tests/ByteCalc2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC82A89B19C53BEE00FAAED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ByteCalc2.app/ByteCalc2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
+				INFOPLIST_FILE = "ByteCalc2Tests/ByteCalc2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC82A85C19C53BEE00FAAED7 /* Build configuration list for PBXProject "ByteCalc2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC82A89419C53BEE00FAAED7 /* Debug */,
+				EC82A89519C53BEE00FAAED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC82A89619C53BEE00FAAED7 /* Build configuration list for PBXNativeTarget "ByteCalc2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC82A89719C53BEE00FAAED7 /* Debug */,
+				EC82A89819C53BEE00FAAED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC82A89919C53BEE00FAAED7 /* Build configuration list for PBXNativeTarget "ByteCalc2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC82A89A19C53BEE00FAAED7 /* Debug */,
+				EC82A89B19C53BEE00FAAED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC82A85919C53BEE00FAAED7 /* Project object */;
+}
