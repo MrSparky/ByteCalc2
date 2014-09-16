@@ -15,13 +15,14 @@
 		EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87419C53BEE00FAAED7 /* AppDelegate.m */; };
 		EC82A87819C53BEE00FAAED7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */; };
 		EC82A87B19C53BEE00FAAED7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87919C53BEE00FAAED7 /* Main_iPad.storyboard */; };
-		EC82A87E19C53BEE00FAAED7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87D19C53BEE00FAAED7 /* ViewController.m */; };
+		EC82A87E19C53BEE00FAAED7 /* HorzViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A87D19C53BEE00FAAED7 /* HorzViewController.m */; };
 		EC82A88019C53BEE00FAAED7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC82A87F19C53BEE00FAAED7 /* Images.xcassets */; };
 		EC82A88719C53BEE00FAAED7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A88619C53BEE00FAAED7 /* XCTest.framework */; };
 		EC82A88819C53BEE00FAAED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86419C53BEE00FAAED7 /* Foundation.framework */; };
 		EC82A88919C53BEE00FAAED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86819C53BEE00FAAED7 /* UIKit.framework */; };
 		EC82A89119C53BEE00FAAED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC82A88F19C53BEE00FAAED7 /* InfoPlist.strings */; };
 		EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */; };
+		EC82A89E19C7B48E00FAAED7 /* VertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89D19C7B48E00FAAED7 /* VertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +48,16 @@
 		EC82A87419C53BEE00FAAED7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC82A87719C53BEE00FAAED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		EC82A87A19C53BEE00FAAED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		EC82A87C19C53BEE00FAAED7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC82A87D19C53BEE00FAAED7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC82A87C19C53BEE00FAAED7 /* HorzViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorzViewController.h; sourceTree = "<group>"; };
+		EC82A87D19C53BEE00FAAED7 /* HorzViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorzViewController.m; sourceTree = "<group>"; };
 		EC82A87F19C53BEE00FAAED7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC82A88519C53BEE00FAAED7 /* ByteCalc2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ByteCalc2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC82A88619C53BEE00FAAED7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC82A88E19C53BEE00FAAED7 /* ByteCalc2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ByteCalc2Tests-Info.plist"; sourceTree = "<group>"; };
 		EC82A89019C53BEE00FAAED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ByteCalc2Tests.m; sourceTree = "<group>"; };
+		EC82A89C19C7B48E00FAAED7 /* VertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertViewController.h; sourceTree = "<group>"; };
+		EC82A89D19C7B48E00FAAED7 /* VertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +120,11 @@
 				EC82A87319C53BEE00FAAED7 /* AppDelegate.h */,
 				EC82A87419C53BEE00FAAED7 /* AppDelegate.m */,
 				EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */,
+				EC82A89C19C7B48E00FAAED7 /* VertViewController.h */,
+				EC82A89D19C7B48E00FAAED7 /* VertViewController.m */,
 				EC82A87919C53BEE00FAAED7 /* Main_iPad.storyboard */,
-				EC82A87C19C53BEE00FAAED7 /* ViewController.h */,
-				EC82A87D19C53BEE00FAAED7 /* ViewController.m */,
+				EC82A87C19C53BEE00FAAED7 /* HorzViewController.h */,
+				EC82A87D19C53BEE00FAAED7 /* HorzViewController.m */,
 				EC82A87F19C53BEE00FAAED7 /* Images.xcassets */,
 				EC82A86B19C53BEE00FAAED7 /* Supporting Files */,
 			);
@@ -202,6 +207,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = DaedalusApps;
 				TargetAttributes = {
+					EC82A86019C53BEE00FAAED7 = {
+						DevelopmentTeam = K3EBQFW9LA;
+					};
 					EC82A88419C53BEE00FAAED7 = {
 						TestTargetID = EC82A86019C53BEE00FAAED7;
 					};
@@ -253,9 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC82A87E19C53BEE00FAAED7 /* ViewController.m in Sources */,
+				EC82A87E19C53BEE00FAAED7 /* HorzViewController.m in Sources */,
 				EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */,
 				EC82A87119C53BEE00FAAED7 /* main.m in Sources */,
+				EC82A89E19C7B48E00FAAED7 /* VertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
 				INFOPLIST_FILE = "ByteCalc2/ByteCalc2-Info.plist";
@@ -403,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ByteCalc2/ByteCalc2-Prefix.pch";
 				INFOPLIST_FILE = "ByteCalc2/ByteCalc2-Info.plist";
