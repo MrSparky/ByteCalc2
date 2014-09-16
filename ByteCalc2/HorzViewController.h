@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalcViewController.h"
 
-@interface HorzViewController : UIViewController
+@interface HorzViewController : CalcViewController
 
 @end

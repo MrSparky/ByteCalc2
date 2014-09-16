@@ -24,6 +24,7 @@
 		EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */; };
 		EC82A89E19C7B48E00FAAED7 /* VertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89D19C7B48E00FAAED7 /* VertViewController.m */; };
 		EC82A8A119C80F3700FAAED7 /* CalculationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */; };
+		EC82A8A419C814EB00FAAED7 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A319C814EB00FAAED7 /* CalcViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		EC82A89D19C7B48E00FAAED7 /* VertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VertViewController.m; sourceTree = "<group>"; };
 		EC82A89F19C80F3700FAAED7 /* CalculationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationEngine.h; sourceTree = "<group>"; };
 		EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationEngine.m; sourceTree = "<group>"; };
+		EC82A8A219C814EB00FAAED7 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
+		EC82A8A319C814EB00FAAED7 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 		EC82A86A19C53BEE00FAAED7 /* ByteCalc2 */ = {
 			isa = PBXGroup;
 			children = (
+				EC82A8A219C814EB00FAAED7 /* CalcViewController.h */,
+				EC82A8A319C814EB00FAAED7 /* CalcViewController.m */,
 				EC82A87319C53BEE00FAAED7 /* AppDelegate.h */,
 				EC82A87419C53BEE00FAAED7 /* AppDelegate.m */,
 				EC82A87619C53BEE00FAAED7 /* Main_iPhone.storyboard */,
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC82A87E19C53BEE00FAAED7 /* HorzViewController.m in Sources */,
+				EC82A8A419C814EB00FAAED7 /* CalcViewController.m in Sources */,
 				EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */,
 				EC82A8A119C80F3700FAAED7 /* CalculationEngine.m in Sources */,
 				EC82A87119C53BEE00FAAED7 /* main.m in Sources */,

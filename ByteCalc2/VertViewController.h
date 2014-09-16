@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalcViewController.h"
 
-@interface VertViewController : UIViewController
+@interface VertViewController : CalcViewController
 
 @end
