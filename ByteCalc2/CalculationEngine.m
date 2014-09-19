@@ -53,13 +53,31 @@
     m_HasOpB = true;
 }
 
-- (void)clearOperand_B {
-    m_HasOpB = 0;
+- (void)clearOperand_A
+{
+    m_OpA = 0;
+    m_HasOpA = false;
+}
+
+- (void)clearOperand_B
+{
+    m_OpB = 0;
     m_HasOpB = false;
 }
 
 - (NSInteger)performOperation
 {
+    // All operations require at least one operand
+    if(m_HasOpA == false)
+        return 0;
+    
+    // Only the "immediate" operations support one operand
+    if(m_HasOpB == false &&
+       m_LastOperation != OperationByteSwap &&
+       m_LastOperation != OperationInvert &&
+       m_LastOperation != OperationSignChange)
+        return 0;
+       
     switch (m_LastOperation) {
         case OperationAdd:
             return [CalculationEngine performAddWithA:m_OpA andB:m_OpB];
@@ -79,6 +97,8 @@
             return [CalculationEngine performByteSwapWithA:m_OpA];
         case OperationInvert:
             return [CalculationEngine performInvertWithA:m_OpA];
+        case OperationSignChange:
+            return [CalculationEngine performSignChangeWithA:m_OpA];
         case OperationLogicXor:
             return [CalculationEngine performLogicXOrWithA:m_OpA andB:m_OpB];
         case OperationLogicAnd:
@@ -86,6 +106,7 @@
         case OperationLogicOr:
             return [CalculationEngine performLogicOrWithA:m_OpA andB:m_OpB];
         default:
+            NSLog(@"Attempted to perform invalid Operation! (%d)", m_LastOperation);
             return 0;
     }
 }
@@ -128,16 +149,6 @@
 - (void)pushShiftRight
 {
     [self pushOperand:OperationShiftR];
-}
-
-- (void)pushByteSwap
-{
-    [self pushOperand:OperationByteSwap];
-}
-
-- (void)pushInvert
-{
-    [self pushOperand:OperationInvert];
 }
 
 - (void)pushLogicXOr

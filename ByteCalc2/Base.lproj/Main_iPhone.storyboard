@@ -36,6 +36,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="D"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="855-z8-Y4R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF7-AU-nNm">
                                 <rect key="frame" x="79" y="151" width="47" height="48"/>
@@ -43,6 +46,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="E"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p2N-IK-2sd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Za-VP-YJg">
                                 <rect key="frame" x="136" y="151" width="47" height="48"/>
@@ -50,6 +56,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="F"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tet-YR-yg0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-or-e9d">
                                 <rect key="frame" x="194" y="151" width="47" height="48"/>
@@ -81,6 +90,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p9k-5E-9BA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ae-dJ-bzb">
                                 <rect key="frame" x="79" y="206" width="47" height="48"/>
@@ -88,6 +100,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qkv-Sb-d9R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McL-gD-Y1I">
                                 <rect key="frame" x="136" y="206" width="47" height="48"/>
@@ -95,6 +110,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mLx-hP-Jjc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcn-HZ-JKE">
                                 <rect key="frame" x="194" y="206" width="47" height="48"/>
@@ -126,6 +144,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xgk-rg-pyI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-W3-LeQ">
                                 <rect key="frame" x="79" y="261" width="47" height="48"/>
@@ -133,6 +154,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ftF-I7-Wdu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15o-DN-n08">
                                 <rect key="frame" x="136" y="261" width="47" height="48"/>
@@ -140,6 +164,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FrB-I6-fro"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHc-yC-SCN">
                                 <rect key="frame" x="194" y="261" width="47" height="48"/>
@@ -171,6 +198,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K6j-Ia-141"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-0t-QXU">
                                 <rect key="frame" x="79" y="316" width="47" height="48"/>
@@ -178,6 +208,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Swm-yu-Kah"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-CW-T75">
                                 <rect key="frame" x="136" y="316" width="47" height="48"/>
@@ -185,6 +218,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G9S-nV-41l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-to-wkG">
                                 <rect key="frame" x="194" y="316" width="47" height="48"/>
@@ -216,6 +252,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S5p-Lk-vLx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNe-IY-LeU">
                                 <rect key="frame" x="79" y="371" width="47" height="48"/>
@@ -223,6 +262,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Fg-kg-Pfw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-jS-jaU">
                                 <rect key="frame" x="136" y="371" width="47" height="48"/>
@@ -230,6 +272,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mHI-JC-no4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k6-nX-lmA">
                                 <rect key="frame" x="194" y="371" width="47" height="48"/>
@@ -261,6 +306,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rf6-pz-SaH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-06-DsW">
                                 <rect key="frame" x="79" y="424" width="47" height="48"/>

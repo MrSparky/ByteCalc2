@@ -25,6 +25,7 @@
 		EC82A89E19C7B48E00FAAED7 /* VertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A89D19C7B48E00FAAED7 /* VertViewController.m */; };
 		EC82A8A119C80F3700FAAED7 /* CalculationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */; };
 		EC82A8A419C814EB00FAAED7 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A319C814EB00FAAED7 /* CalcViewController.m */; };
+		ECE561D019CBCAC80075617D /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE561CF19CBCAC80075617D /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationEngine.m; sourceTree = "<group>"; };
 		EC82A8A219C814EB00FAAED7 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
 		EC82A8A319C814EB00FAAED7 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
+		ECE561CE19CBCAC80075617D /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		ECE561CF19CBCAC80075617D /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				EC82A87D19C53BEE00FAAED7 /* HorzViewController.m */,
 				EC82A87F19C53BEE00FAAED7 /* Images.xcassets */,
 				EC82A86B19C53BEE00FAAED7 /* Supporting Files */,
+				ECE561CE19CBCAC80075617D /* InputHandler.h */,
+				ECE561CF19CBCAC80075617D /* InputHandler.m */,
 				EC82A89F19C80F3700FAAED7 /* CalculationEngine.h */,
 				EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */,
 			);
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE561D019CBCAC80075617D /* InputHandler.m in Sources */,
 				EC82A87E19C53BEE00FAAED7 /* HorzViewController.m in Sources */,
 				EC82A8A419C814EB00FAAED7 /* CalcViewController.m in Sources */,
 				EC82A87519C53BEE00FAAED7 /* AppDelegate.m in Sources */,
@@ -493,6 +499,7 @@
 				EC82A89819C53BEE00FAAED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC82A89919C53BEE00FAAED7 /* Build configuration list for PBXNativeTarget "ByteCalc2Tests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +508,7 @@
 				EC82A89B19C53BEE00FAAED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

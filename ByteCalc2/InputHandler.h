@@ -19,7 +19,12 @@ typedef enum e_InputMode {
 
 @property (assign) BCInputMode inputMode;
 
+// returns Input to 'empty' string
 - (void)clearInput;
+
+// keeps input unchanged, but next append will clear overwrite input
+- (void)resetInput;
+
 - (void)removeLastCharacter;
 
 - (void)appendInputWithChar:(unichar)input;

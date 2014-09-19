@@ -42,7 +42,8 @@
     m_CalcEngine = [[self sharedAppDelegate] calcEngine];
     
     [self setBitWidth:32];
-    [self setInputMode:InputModeHexidecimal];
+    [self setInputMode:[m_InputHandler inputMode]];
+    
     if([m_InputHandler hasValue]) {
         [ResultScreen setText:[m_InputHandler textValue]];
     }else{
@@ -69,6 +70,66 @@
 
 - (AppDelegate *) sharedAppDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (void) applyOperation {
+    // If user has provided input, capture it
+    if([m_InputHandler hasValue])
+    {
+        NSInteger currentInput = [m_InputHandler integerValue];
+        
+        // If calculator already has 1st operand stored, apply stored operation
+        // and store result as new first operation
+        if([m_CalcEngine hasOperand_A])
+        {
+            [m_CalcEngine setOperand_B:currentInput];
+            NSInteger result = [m_CalcEngine performOperation];
+            [m_CalcEngine clearOperand_B];
+            // TBD - store Result somewhere
+            [m_CalcEngine setOperand_A:result];
+            // Update Result Display
+            [m_InputHandler setInputValue:result];
+            [ResultScreen setText:[m_InputHandler textValue]];
+        }
+        // store input as 1st operand
+        else
+        {
+            [m_CalcEngine setOperand_A:currentInput];
+        }
+        [m_InputHandler resetInput];
+    }
+}
+
+- (void) applyImmediateOp:(BCOperation)op
+{
+    // If user has provided input, capture it
+    if([m_InputHandler hasValue])
+    {
+        NSInteger currentInput = [m_InputHandler integerValue];
+        NSInteger result;
+        
+        if(op == OperationSignChange)
+        {
+            result = [CalculationEngine performSignChangeWithA:currentInput];
+        }
+        else if(op == OperationInvert)
+        {
+            result = [CalculationEngine performInvertWithA:currentInput];
+        }
+        else if(op == OperationByteSwap)
+        {
+            result = [CalculationEngine performByteSwapWithA:currentInput];
+        }
+        else{
+            // Unsupported operation
+            NSLog(@"Attempted to apply unsupported ImmediateOp! (%d)", op);
+            return;
+        }
+        
+        [m_InputHandler setInputValue:result];
+        [ResultScreen setText:[m_InputHandler textValue]];
+        [m_InputHandler resetInput];
+    }
 }
 
 #pragma Button Handling
@@ -119,82 +180,126 @@
 
 - (IBAction)tapButtonAdd:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushAdd];
 }
 
 - (IBAction)tapButtonSubtract:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushSubtract];
 }
 
 - (IBAction)tapButtonMultiply:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushMultiply];
 }
 
 - (IBAction)tapButtonDivide:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushDivide];
 }
 
 - (IBAction)tapButtonModulo:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushModulo];
 }
 
 - (IBAction)tapButtonShiftL:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushShiftLeft];
 }
 
 - (IBAction)tapButtonShiftR:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushShiftRight];
 }
 
 - (IBAction)tapButtonByteSwap:(id)sender
 {
-    
+    [self applyImmediateOp:OperationByteSwap];
 }
 
 - (IBAction)tapbuttonInvert:(id)sender
 {
-    
+    [self applyImmediateOp:OperationInvert];
 }
 
 - (IBAction)tapButtonSignChange:(id)sender
 {
-    
+    [self applyImmediateOp:OperationSignChange];
 }
 
 - (IBAction)tapButtonLogicXor:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushLogicXOr];
 }
 
 - (IBAction)tapButtonLogicAnd:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushLogicAnd];
 }
 
 - (IBAction)tapButtonLogicOr:(id)sender
 {
+    [self applyOperation];
     
+    [m_CalcEngine pushLogicOr];
 }
 
 - (IBAction)tapButtonEquals:(id)sender
 {
-    
+    [self applyOperation];
+    // Equals breaks the result / operation chain
+    [m_CalcEngine clearOperand_A];
 }
 
 - (IBAction)tapButtonClear:(id)sender
 {
-    
+    // If input present, just erase
+    if([m_InputHandler hasValue])
+    {
+        [m_InputHandler clearInput];
+        [ResultScreen setText:[m_InputHandler textValue]];
+    }
+    // If no input, reset calculator
+    else
+    {
+        [m_CalcEngine clearOperand_A];
+        [m_CalcEngine clearOperand_B];
+    }
 }
 
 - (IBAction)tapButtonBackspace:(id)sender
 {
-    
+    [m_InputHandler removeLastCharacter];
+    [ResultScreen setText:[m_InputHandler textValue]];
+}
+
+- (IBAction)tapInputButton:(id)sender
+{
+    UIButton * button = (UIButton *)sender;
+    NSString * title = [[button titleLabel] text];
+    //NSInteger value = [button tag];
+
+    [m_InputHandler appendInputWithChar:[title characterAtIndex:0]];
+    [ResultScreen setText:[m_InputHandler textValue]];
 }
 
 @end

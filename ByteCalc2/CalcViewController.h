@@ -37,4 +37,6 @@
 - (IBAction)tapButtonClear:(id)sender;
 - (IBAction)tapButtonBackspace:(id)sender;
 
+- (IBAction)tapInputButton:(id)sender;
+
 @end

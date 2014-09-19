@@ -11,6 +11,7 @@
 @interface InputHandler () {
     BCInputMode m_InputMode;
     NSMutableString * m_InputString;
+    BOOL m_PendingReset;
 }
 
 @end
@@ -22,6 +23,7 @@
 - (id) init {
     self = [super init];
     if(self) {
+        m_PendingReset = false;
         m_InputMode = InputModeDecimal;
         [self clearInput];
     }
@@ -42,26 +44,39 @@
 - (void)clearInput
 {
     m_InputString = [NSMutableString string];
+    m_PendingReset = false;
+}
+
+- (void)resetInput
+{
+    m_PendingReset = true;
 }
 
 - (void)removeLastCharacter
 {
     NSUInteger length = [m_InputString length];
     [m_InputString deleteCharactersInRange:NSMakeRange(length - 1, 1)];
+    // TBD - should this clear the pending "reset"?
 }
 
 - (void)appendInputWithChar:(unichar)input;
 {
+    if(m_PendingReset)
+        [self clearInput];
     [m_InputString appendString:[NSString stringWithCharacters:&input length:1]];
 }
 
 - (void)appendInputWithValue:(NSInteger)input
 {
+    if(m_PendingReset)
+        [self clearInput];
     [m_InputString appendString:[NSString stringWithFormat:@"%d", input]];
 }
 
 - (void)appendInputWithLetter:(NSInteger)input
 {
+    if(m_PendingReset)
+        [self clearInput];
     [m_InputString appendString:[NSString stringWithFormat:@"%c", 'A' + input]];
 }
 

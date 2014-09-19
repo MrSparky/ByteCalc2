@@ -18,6 +18,7 @@ typedef enum e_Operation {
     OperationShiftR,
     OperationByteSwap,
     OperationInvert,
+    OperationSignChange,
     OperationLogicXor,
     OperationLogicAnd,
     OperationLogicOr
@@ -31,6 +32,7 @@ typedef enum e_Operation {
 - (void)setOperand_A:(NSInteger)opA;
 - (void)setOperand_B:(NSInteger)opB;
 
+- (void)clearOperand_A;
 - (void)clearOperand_B;
 
 - (NSInteger)performOperation;
@@ -43,8 +45,6 @@ typedef enum e_Operation {
 - (void)pushModulo;
 - (void)pushShiftLeft;
 - (void)pushShiftRight;
-- (void)pushByteSwap;
-- (void)pushInvert;
 - (void)pushLogicXOr;
 - (void)pushLogicAnd;
 - (void)pushLogicOr;
