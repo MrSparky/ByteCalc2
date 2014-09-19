@@ -7,6 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "InputHandler.h"
+#import "CalculationEngine.h"
+
+@interface AppDelegate () {
+    InputHandler * m_InputHandler;
+    CalculationEngine * m_CalcEngine;
+}
+
+@end
 
 @implementation AppDelegate
 
@@ -41,6 +50,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (InputHandler *)inputHandler
+{
+    if(m_InputHandler == NULL)
+    {
+        m_InputHandler = [[InputHandler alloc] init];
+    }
+    
+    return m_InputHandler;
+}
+
+- (CalculationEngine *)calcEngine
+{
+    if(m_CalcEngine == NULL)
+    {
+        m_CalcEngine = [[CalculationEngine alloc] init];
+    }
+    
+    return m_CalcEngine;
 }
 
 @end

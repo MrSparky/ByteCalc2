@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class InputHandler;
+@class CalculationEngine;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (InputHandler *) inputHandler;
+- (CalculationEngine *) calcEngine;
 
 @end
