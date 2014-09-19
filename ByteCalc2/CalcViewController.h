@@ -7,13 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum e_InputMode {
-    InputModeASCII,
-    InputModeHexidecimal,
-    InputModeDecimal,
-    InputModeOctal
-} BCInputMode;
+#import "InputHandler.h"
 
 @interface CalcViewController : UIViewController
 

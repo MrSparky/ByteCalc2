@@ -7,9 +7,15 @@
 //
 
 #import "CalcViewController.h"
+#import "InputHandler.h"
+#import "CalculationEngine.h"
+#import "AppDelegate.h"
 
 @interface CalcViewController ()
-
+{
+    InputHandler * m_InputHandler;
+    CalculationEngine * m_CalcEngine;
+}
 @end
 
 @implementation CalcViewController
@@ -22,6 +28,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        m_InputHandler = [[self sharedAppDelegate] inputHandler];
+        m_CalcEngine = [[self sharedAppDelegate] calcEngine];
     }
     return self;
 }
@@ -30,8 +38,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    m_InputHandler = [[self sharedAppDelegate] inputHandler];
+    m_CalcEngine = [[self sharedAppDelegate] calcEngine];
+    
     [self setBitWidth:32];
     [self setInputMode:InputModeHexidecimal];
+    if([m_InputHandler hasValue]) {
+        [ResultScreen setText:[m_InputHandler textValue]];
+    }else{
+        [ResultScreen setText:@""];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,8 +67,11 @@
 }
 */
 
-#pragma Button Handling
+- (AppDelegate *) sharedAppDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
+#pragma Button Handling
 
 - (IBAction)InputModeSelected:(id)sender {
     UISegmentedControl * inputSelector = (UISegmentedControl*)sender;
