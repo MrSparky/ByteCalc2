@@ -14,6 +14,9 @@
 
 @implementation CalcViewController
 
+@synthesize ResultScreen;
+@synthesize BinaryResultScreen;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setBitWidth:32];
+    [self setInputMode:InputModeHexidecimal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +52,51 @@
 */
 
 #pragma Button Handling
+
+
+- (IBAction)InputModeSelected:(id)sender {
+    UISegmentedControl * inputSelector = (UISegmentedControl*)sender;
+    switch (inputSelector.selectedSegmentIndex) {
+        case 0:
+            [self setInputMode:InputModeASCII];
+            break;
+        case 1:
+            [self setInputMode:InputModeHexidecimal];
+            break;
+        case 2:
+            [self setInputMode:InputModeDecimal];
+            break;
+        case 3:
+            [self setInputMode:InputModeOctal];
+            break;
+        default:
+            // TBD - how did we get here?
+            NSLog(@"Set InputMode to Unknown (%d)", inputSelector.selectedSegmentIndex);
+            break;
+    }
+}
+
+- (IBAction)ResultModeSelected:(id)sender {
+    UISegmentedControl * inputSelector = (UISegmentedControl*)sender;
+    switch (inputSelector.selectedSegmentIndex) {
+        case 0:
+            [self setBitWidth:32];
+            break;
+        case 1:
+            [self setBitWidth:24];
+            break;
+        case 2:
+            [self setBitWidth:16];
+            break;
+        case 3:
+            [self setBitWidth:8];
+            break;
+        default:
+            // TBD - how did we get here?
+            NSLog(@"Set BitWidth to Unknown (%d)", inputSelector.selectedSegmentIndex);
+            break;
+    }
+}
 
 - (IBAction)tapButtonAdd:(id)sender
 {

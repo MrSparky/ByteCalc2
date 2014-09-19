@@ -343,6 +343,9 @@
                                     <segment title="Dec"/>
                                     <segment title="Oct"/>
                                 </segments>
+                                <connections>
+                                    <action selector="InputModeSelected:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vJf-mK-lkQ"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3Qa-0i-xlS">
                                 <rect key="frame" x="9" y="125" width="177" height="29"/>
@@ -353,6 +356,9 @@
                                     <segment title="16 bit"/>
                                     <segment title="8 bit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="ResultModeSelected:" destination="vXZ-lx-hvc" eventType="valueChanged" id="BGB-Vh-ARU"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.88326870437956206" green="0.91155337591240881" blue="0.91662864963503654" alpha="1" colorSpace="calibratedRGB"/>
@@ -360,6 +366,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="BinaryResultScreen" destination="bEv-Y8-y7g" id="ZAb-bC-CnL"/>
+                        <outlet property="ResultScreen" destination="uD6-v8-e2t" id="STq-d6-BjD"/>
                         <segue destination="VdC-jN-c5u" kind="modal" identifier="SegueToHorizontal" id="2kh-M0-qrW"/>
                     </connections>
                 </viewController>
@@ -820,6 +828,9 @@
                                     <segment title="Dec"/>
                                     <segment title="Oct"/>
                                 </segments>
+                                <connections>
+                                    <action selector="InputModeSelected:" destination="VdC-jN-c5u" eventType="valueChanged" id="DwP-fS-Jef"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r2I-l0-4xM">
                                 <rect key="frame" x="290" y="55" width="177" height="29"/>
@@ -830,6 +841,9 @@
                                     <segment title="16 bit"/>
                                     <segment title="8 bit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="ResultModeSelected:" destination="VdC-jN-c5u" eventType="valueChanged" id="WT0-P6-cAh"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.90980392156862744" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
@@ -838,6 +852,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="ResultScreen" destination="bhC-ck-iTM" id="BJX-ft-Pa8"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="SegueToVertical" id="Tj9-zH-btg"/>
                     </connections>
                 </viewController>

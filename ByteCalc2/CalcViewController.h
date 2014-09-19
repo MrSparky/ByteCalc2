@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum e_InputMode {
+    InputModeASCII,
+    InputModeHexidecimal,
+    InputModeDecimal,
+    InputModeOctal
+} BCInputMode;
+
 @interface CalcViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *ResultScreen;
+@property (weak, nonatomic) IBOutlet UITextField *BinaryResultScreen;
+
+@property (assign) BCInputMode InputMode;
+@property (assign) UInt8 BitWidth;
+
+- (IBAction)InputModeSelected:(id)sender;
+- (IBAction)ResultModeSelected:(id)sender;
 
 - (IBAction)tapButtonAdd:(id)sender;
 - (IBAction)tapButtonSubtract:(id)sender;
