@@ -17,6 +17,8 @@
 
 @implementation InputHandler
 
+@synthesize  inputMode;
+
 - (id) init {
     self = [super init];
     if(self) {
@@ -24,6 +26,11 @@
         [self clearInput];
     }
     return self;
+}
+
+- (BCInputMode)inputMode
+{
+    return m_InputMode;
 }
 
 - (void)setInputMode:(BCInputMode)mode

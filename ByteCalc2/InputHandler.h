@@ -17,7 +17,7 @@ typedef enum e_InputMode {
 
 @interface InputHandler : NSObject
 
-- (void)setInputMode:(BCInputMode)mode;
+@property (assign) BCInputMode inputMode;
 
 - (void)clearInput;
 - (void)removeLastCharacter;
