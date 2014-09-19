@@ -11,84 +11,148 @@
 @interface CalculationEngine (){
     NSInteger m_OpA;
     NSInteger m_OpB;
+    BOOL m_HasOpA;
+    BOOL m_HasOpB;
+    BCOperation m_LastOperation;
 }
 @end
 
 @implementation CalculationEngine
 
+- (id) init
+{
+    self = [super init];
+    if(self) {
+        m_OpA = 0;
+        m_OpB = 0;
+        m_HasOpA = false;
+        m_HasOpB = false;
+    }
+    return self;
+}
+
+- (BOOL)hasOperand_A
+{
+    return m_HasOpA;
+}
+
+- (BOOL)hasOperand_B
+{
+    return m_HasOpB;
+}
+
 - (void)setOperand_A:(NSInteger)opA
 {
     m_OpA = opA;
+    m_HasOpA = true;
 }
 
 - (void)setOperand_B:(NSInteger)opB
 {
     m_OpB = opB;
+    m_HasOpB = true;
 }
 
-- (NSInteger)performAdd
-{
-    return [CalculationEngine performAddWithA:m_OpA andB:m_OpB];
+- (void)clearOperand_B {
+    m_HasOpB = 0;
+    m_HasOpB = false;
 }
 
-- (NSInteger)performSubtract
+- (NSInteger)performOperation
 {
-    return [CalculationEngine performSubtractWithA:m_OpA andB:m_OpB];
+    switch (m_LastOperation) {
+        case OperationAdd:
+            return [CalculationEngine performAddWithA:m_OpA andB:m_OpB];
+        case OperationSubtract:
+            return [CalculationEngine performSubtractWithA:m_OpA andB:m_OpB];
+        case OperationMultiply:
+            return [CalculationEngine performMultiplyWithA:m_OpA andB:m_OpB];
+        case OperationDivide:
+            return [CalculationEngine performDivideWithA:m_OpA andB:m_OpB];
+        case OperationModulo:
+            return [CalculationEngine performModuloWithA:m_OpA andB:m_OpB];
+        case OperationShiftL:
+            return [CalculationEngine performShiftLeftWithA:m_OpA andB:m_OpB];
+        case OperationShiftR:
+            return [CalculationEngine performShiftRightWithA:m_OpA andB:m_OpB];
+        case OperationByteSwap:
+            return [CalculationEngine performByteSwapWithA:m_OpA];
+        case OperationInvert:
+            return [CalculationEngine performInvertWithA:m_OpA];
+        case OperationLogicXor:
+            return [CalculationEngine performLogicXOrWithA:m_OpA andB:m_OpB];
+        case OperationLogicAnd:
+            return [CalculationEngine performLogicAndWithA:m_OpA andB:m_OpB];
+        case OperationLogicOr:
+            return [CalculationEngine performLogicOrWithA:m_OpA andB:m_OpB];
+        default:
+            return 0;
+    }
 }
 
-- (NSInteger)performMultiply
+- (void)pushOperand:(BCOperation)op
 {
-    return [CalculationEngine performMultiplyWithA:m_OpA andB:m_OpB];
+    m_LastOperation = op;
 }
 
-- (NSInteger)performDivide
+- (void)pushAdd
 {
-    return [CalculationEngine performDivideWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationAdd];
 }
 
-- (NSInteger)performModulo
+- (void)pushSubtract
 {
-    return [CalculationEngine performModuloWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationSubtract];
 }
 
-- (NSInteger)performShiftLeft
+- (void)pushMultiply
 {
-    return [CalculationEngine performShiftLeftWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationMultiply];
 }
 
-- (NSInteger)performShiftRight
+- (void)pushDivide
 {
-    return [CalculationEngine performShiftRightWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationDivide];
 }
 
-- (NSInteger)performByteSwap
+- (void)pushModulo
 {
-    return [CalculationEngine performByteSwapWithA:m_OpA];
+    [self pushOperand:OperationModulo];
 }
 
-- (NSInteger)performInvert
+- (void)pushShiftLeft
 {
-    return [CalculationEngine performInvertWithA:m_OpA];
+    [self pushOperand:OperationShiftL];
 }
 
-- (NSInteger)performSignChange
+- (void)pushShiftRight
 {
-    return [CalculationEngine performSignChangeWithA:m_OpA];
+    [self pushOperand:OperationShiftR];
 }
 
-- (NSInteger)performLogicXOr
+- (void)pushByteSwap
 {
-    return [CalculationEngine performLogicXOrWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationByteSwap];
 }
 
-- (NSInteger)performLogicAnd
+- (void)pushInvert
 {
-    return [CalculationEngine performLogicAndWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationInvert];
 }
 
-- (NSInteger)performLogicOr
+- (void)pushLogicXOr
 {
-    return [CalculationEngine performLogicOrWithA:m_OpA andB:m_OpB];
+    [self pushOperand:OperationLogicXor];
+}
+
+- (void)pushLogicAnd
+{
+    [self pushOperand:OperationLogicAnd];
+}
+
+- (void)pushLogicOr
+{
+    [self pushOperand:OperationLogicOr];
 }
 
 + (NSInteger)performAddWithA:(NSInteger)opA andB:(NSInteger)opB
