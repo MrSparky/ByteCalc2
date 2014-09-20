@@ -45,9 +45,9 @@
     [self setInputMode:[m_InputHandler inputMode]];
     
     if([m_InputHandler hasValue]) {
-        [ResultScreen setText:[m_InputHandler textValue]];
+        [self updateResultScreen];
     }else{
-        [ResultScreen setText:@""];
+        [self clearResultScreen];
     }
 }
 
@@ -57,9 +57,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma Public Interface
+
 - (InputHandler *)InputHandler
 {
     return m_InputHandler;
+}
+
+- (void) clearResultScreen
+{
+    [ResultScreen setText:@""];
+    // TBD - set BinaryInputScreen to all 0s
+}
+
+- (void) updateResultScreen
+{
+    [ResultScreen setText:[m_InputHandler textValue]];
+    // TBD - set BinaryInputScreen to value
 }
 
 /*
@@ -72,6 +86,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma Private Helper Methods
 
 - (AppDelegate *) sharedAppDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -94,7 +110,7 @@
             [m_CalcEngine setOperand_A:result];
             // Update Result Display
             [m_InputHandler setInputValue:result];
-            [ResultScreen setText:[m_InputHandler textValue]];
+            [self updateResultScreen];
         }
         // store input as 1st operand
         else
@@ -132,7 +148,7 @@
         }
         
         [m_InputHandler setInputValue:result];
-        [ResultScreen setText:[m_InputHandler textValue]];
+        [self updateResultScreen];
         [m_InputHandler resetInput];
     }
 }
@@ -281,7 +297,7 @@
     if([m_InputHandler hasValue])
     {
         [m_InputHandler clearInput];
-        [ResultScreen setText:[m_InputHandler textValue]];
+        [self updateResultScreen];
     }
     // If no input, reset calculator
     else
@@ -294,7 +310,7 @@
 - (IBAction)tapButtonBackspace:(id)sender
 {
     [m_InputHandler removeLastCharacter];
-    [ResultScreen setText:[m_InputHandler textValue]];
+    [self updateResultScreen];
 }
 
 - (IBAction)tapInputButton:(id)sender
@@ -304,7 +320,7 @@
     //NSInteger value = [button tag];
 
     [m_InputHandler appendInputWithChar:[title characterAtIndex:0]];
-    [ResultScreen setText:[m_InputHandler textValue]];
+    [self updateResultScreen];
 }
 
 @end

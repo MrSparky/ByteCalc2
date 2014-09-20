@@ -19,6 +19,9 @@
 
 - (InputHandler *)InputHandler;
 
+- (void) clearResultScreen;
+- (void) updateResultScreen;
+
 - (IBAction)InputModeSelected:(id)sender;
 - (IBAction)ResultModeSelected:(id)sender;
 
