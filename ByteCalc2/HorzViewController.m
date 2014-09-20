@@ -99,7 +99,7 @@
     }
     
     [self.InputHandler setInputValue:newResult];
-    [self.ResultScreen setText:[self.InputHandler textValue]];
+    [self updateResultScreen];
 
 }
 

@@ -71,7 +71,7 @@
     //NSInteger value = [button tag];
     
     [self.InputHandler appendInputWithChar:[title characterAtIndex:0]];
-    [self.ResultScreen setText:[self.InputHandler textValue]];
+    [self updateResultScreen];
 }
 
 
