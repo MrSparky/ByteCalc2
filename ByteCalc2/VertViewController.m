@@ -62,6 +62,13 @@
     }
 }
 
+
+- (UIButton *)getButtonforValue:(NSInteger)value
+{
+    return (UIButton *)[self.view viewWithTag:value];
+}
+
+
 #pragma Button Handling
 
 - (IBAction)tapInputButton:(id)sender
@@ -72,6 +79,49 @@
     
     [self.InputHandler appendInputWithChar:[title characterAtIndex:0]];
     [self updateResultScreen];
+}
+
+// Override
+- (IBAction)InputModeSelected:(id)sender
+{
+    [super InputModeSelected:sender];
+    switch (self.InputMode)
+    {
+        case InputModeASCII:
+        case InputModeHexidecimal:
+            [[self getButtonforValue:15] setEnabled:YES];
+            [[self getButtonforValue:14] setEnabled:YES];
+            [[self getButtonforValue:13] setEnabled:YES];
+            [[self getButtonforValue:12] setEnabled:YES];
+            [[self getButtonforValue:11] setEnabled:YES];
+            [[self getButtonforValue:10] setEnabled:YES];
+            [[self getButtonforValue:9]  setEnabled:YES];
+            [[self getButtonforValue:8]  setEnabled:YES];
+            break;
+        case InputModeDecimal:
+            [[self getButtonforValue:15] setEnabled:NO];
+            [[self getButtonforValue:14] setEnabled:NO];
+            [[self getButtonforValue:13] setEnabled:NO];
+            [[self getButtonforValue:12] setEnabled:NO];
+            [[self getButtonforValue:11] setEnabled:NO];
+            [[self getButtonforValue:10] setEnabled:NO];
+            [[self getButtonforValue:9]  setEnabled:YES];
+            [[self getButtonforValue:8]  setEnabled:YES];
+            break;
+        case InputModeOctal:
+            [[self getButtonforValue:15] setEnabled:NO];
+            [[self getButtonforValue:14] setEnabled:NO];
+            [[self getButtonforValue:13] setEnabled:NO];
+            [[self getButtonforValue:12] setEnabled:NO];
+            [[self getButtonforValue:11] setEnabled:NO];
+            [[self getButtonforValue:10] setEnabled:NO];
+            [[self getButtonforValue:9]  setEnabled:NO];
+            [[self getButtonforValue:8]  setEnabled:NO];
+            break;
+        default:
+            NSLog(@"Unsupported InputMode for VerViewController! (%d)", self.InputMode);
+            break;
+    }
 }
 
 
