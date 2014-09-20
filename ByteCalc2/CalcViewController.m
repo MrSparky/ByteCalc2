@@ -57,6 +57,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (InputHandler *)InputHandler
+{
+    return m_InputHandler;
+}
+
 /*
 #pragma mark - Navigation
 

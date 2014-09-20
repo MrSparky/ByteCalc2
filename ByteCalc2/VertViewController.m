@@ -48,18 +48,31 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationLandscapeLeft;
+    return UIInterfaceOrientationPortrait;
 }
 
-- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                 duration:(NSTimeInterval)duration
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
 {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait ||
-        toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
-        [self performSegueWithIdentifier: @"SegueToVertical"
+        [self performSegueWithIdentifier: @"SegueToHorizontal"
                                   sender: self];
     }
 }
+
+#pragma Button Handling
+
+- (IBAction)tapInputButton:(id)sender
+{
+    UIButton * button = (UIButton *)sender;
+    NSString * title = [[button titleLabel] text];
+    //NSInteger value = [button tag];
+    
+    [self.InputHandler appendInputWithChar:[title characterAtIndex:0]];
+    [self.ResultScreen setText:[self.InputHandler textValue]];
+}
+
 
 @end

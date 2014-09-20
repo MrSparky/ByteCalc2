@@ -17,6 +17,8 @@
 @property (assign) BCInputMode InputMode;
 @property (assign) UInt8 BitWidth;
 
+- (InputHandler *)InputHandler;
+
 - (IBAction)InputModeSelected:(id)sender;
 - (IBAction)ResultModeSelected:(id)sender;
 
@@ -36,7 +38,5 @@
 - (IBAction)tapButtonEquals:(id)sender;
 - (IBAction)tapButtonClear:(id)sender;
 - (IBAction)tapButtonBackspace:(id)sender;
-
-- (IBAction)tapInputButton:(id)sender;
 
 @end

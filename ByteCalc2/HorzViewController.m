@@ -7,6 +7,7 @@
 //
 
 #import "HorzViewController.h"
+#import "CalculationEngine.h"
 
 @interface HorzViewController ()
 
@@ -28,18 +29,46 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationPortrait;
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                duration:(NSTimeInterval)duration
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                 duration:(NSTimeInterval)duration
 {
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    if (toInterfaceOrientation == UIInterfaceOrientationPortrait ||
+        toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
     {
-        [self performSegueWithIdentifier: @"SegueToHorizontal"
+        [self performSegueWithIdentifier: @"SegueToVertical"
                                   sender: self];
     }
+}
+
+#pragma Button Handling
+
+- (IBAction)tapInputButton:(id)sender
+{
+    UIButton * button = (UIButton *)sender;
+    NSString * title = [[button titleLabel] text];
+    NSInteger value = [button tag];
+    
+    NSInteger newResult;
+    
+    if([title compare:@"1"] == 0)
+    {
+        newResult = [CalculationEngine clearBit:value inValue:[self.InputHandler integerValue]];
+        //[[button titleLabel] setText:@"0"];
+        [button setTitle:@"0" forState:UIControlStateNormal];
+    }
+    else
+    {
+        newResult = [CalculationEngine setBit:value inValue:[self.InputHandler integerValue]];
+        //[[button titleLabel] setText:@"1"];
+        [button setTitle:@"1" forState:UIControlStateNormal];
+    }
+    
+    [self.InputHandler setInputValue:newResult];
+    [self.ResultScreen setText:[self.InputHandler textValue]];
+
 }
 
 @end

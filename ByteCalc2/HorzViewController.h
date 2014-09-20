@@ -11,4 +11,6 @@
 
 @interface HorzViewController : CalcViewController
 
+- (IBAction)tapInputButton:(id)sender;
+
 @end
