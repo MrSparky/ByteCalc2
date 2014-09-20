@@ -67,13 +67,15 @@
 - (void) clearResultScreen
 {
     [ResultScreen setText:@""];
-    // TBD - set BinaryInputScreen to all 0s
+    // set BinaryInputScreen to all 0s
+    [BinaryResultScreen setText:[InputHandler binaryStringFromInteger:0 andWidth:32]];
 }
 
 - (void) updateResultScreen
 {
     [ResultScreen setText:[m_InputHandler textValue]];
-    // TBD - set BinaryInputScreen to value
+    // set BinaryInputScreen to value
+    [BinaryResultScreen setText:[m_InputHandler binaryValue]];
 }
 
 /*
@@ -313,14 +315,5 @@
     [self updateResultScreen];
 }
 
-- (IBAction)tapInputButton:(id)sender
-{
-    UIButton * button = (UIButton *)sender;
-    NSString * title = [[button titleLabel] text];
-    //NSInteger value = [button tag];
-
-    [m_InputHandler appendInputWithChar:[title characterAtIndex:0]];
-    [self updateResultScreen];
-}
 
 @end
