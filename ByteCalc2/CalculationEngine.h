@@ -63,4 +63,7 @@ typedef enum e_Operation {
 + (NSInteger)performLogicAndWithA:(NSInteger)opA andB:(NSInteger)opB;
 + (NSInteger)performLogicOrWithA:(NSInteger)opA andB:(NSInteger)opB;
 
++ (NSInteger)setBit:(NSInteger)bit inValue:(NSInteger)value;
++ (NSInteger)clearBit:(NSInteger)bit inValue:(NSInteger)value;
+
 @end

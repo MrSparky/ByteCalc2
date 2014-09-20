@@ -231,4 +231,14 @@
     return opA | opB;
 }
 
++ (NSInteger)setBit:(NSInteger)bit inValue:(NSInteger)value
+{
+    return value | (1 << bit);
+}
+
++ (NSInteger)clearBit:(NSInteger)bit inValue:(NSInteger)value
+{
+    return value & ~(1 << bit);
+}
+
 @end
