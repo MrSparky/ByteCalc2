@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC5B726219DE4F1C00A1736A /* CalcEngineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B726119DE4F1C00A1736A /* CalcEngineTestCase.m */; };
 		EC82A86519C53BEE00FAAED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86419C53BEE00FAAED7 /* Foundation.framework */; };
 		EC82A86719C53BEE00FAAED7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86619C53BEE00FAAED7 /* CoreGraphics.framework */; };
 		EC82A86919C53BEE00FAAED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC82A86819C53BEE00FAAED7 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC5B726119DE4F1C00A1736A /* CalcEngineTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcEngineTestCase.m; sourceTree = "<group>"; };
 		EC82A86119C53BEE00FAAED7 /* ByteCalc2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCalc2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC82A86419C53BEE00FAAED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC82A86619C53BEE00FAAED7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */,
+				EC5B726119DE4F1C00A1736A /* CalcEngineTestCase.m */,
 				EC82A88D19C53BEE00FAAED7 /* Supporting Files */,
 			);
 			path = ByteCalc2Tests;
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5B726219DE4F1C00A1736A /* CalcEngineTestCase.m in Sources */,
 				EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
