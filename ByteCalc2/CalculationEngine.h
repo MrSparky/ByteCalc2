@@ -37,7 +37,7 @@ typedef enum e_Operation {
 
 - (NSInteger)performOperation;
 
-- (void)pushOperand:(BCOperation)op;
+- (void)pushOperation:(BCOperation)op;
 - (void)pushAdd;
 - (void)pushSubtract;
 - (void)pushMultiply;

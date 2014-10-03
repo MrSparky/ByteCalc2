@@ -111,59 +111,59 @@
     }
 }
 
-- (void)pushOperand:(BCOperation)op
+- (void)pushOperation:(BCOperation)op
 {
     m_LastOperation = op;
 }
 
 - (void)pushAdd
 {
-    [self pushOperand:OperationAdd];
+    [self pushOperation:OperationAdd];
 }
 
 - (void)pushSubtract
 {
-    [self pushOperand:OperationSubtract];
+    [self pushOperation:OperationSubtract];
 }
 
 - (void)pushMultiply
 {
-    [self pushOperand:OperationMultiply];
+    [self pushOperation:OperationMultiply];
 }
 
 - (void)pushDivide
 {
-    [self pushOperand:OperationDivide];
+    [self pushOperation:OperationDivide];
 }
 
 - (void)pushModulo
 {
-    [self pushOperand:OperationModulo];
+    [self pushOperation:OperationModulo];
 }
 
 - (void)pushShiftLeft
 {
-    [self pushOperand:OperationShiftL];
+    [self pushOperation:OperationShiftL];
 }
 
 - (void)pushShiftRight
 {
-    [self pushOperand:OperationShiftR];
+    [self pushOperation:OperationShiftR];
 }
 
 - (void)pushLogicXOr
 {
-    [self pushOperand:OperationLogicXor];
+    [self pushOperation:OperationLogicXor];
 }
 
 - (void)pushLogicAnd
 {
-    [self pushOperand:OperationLogicAnd];
+    [self pushOperation:OperationLogicAnd];
 }
 
 - (void)pushLogicOr
 {
-    [self pushOperand:OperationLogicOr];
+    [self pushOperation:OperationLogicOr];
 }
 
 + (NSInteger)performAddWithA:(NSInteger)opA andB:(NSInteger)opB
