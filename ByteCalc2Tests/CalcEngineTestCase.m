@@ -171,4 +171,18 @@ CalculationEngine * m_CalcEngine;
     //XCTAssertEqual([CalculationEngine performShiftRightWithA:0x80000000 andB:32], 0, @"MinInt>>32");
 }
 
+-(void)testByteSwap
+{
+    XCTAssertEqual([CalculationEngine performByteSwapWithA:0x12], 0x12, @"ByteSwap8");
+    XCTAssertEqual([CalculationEngine performByteSwapWithA:0x1234], 0x3412, @"ByteSwap16");
+    XCTAssertEqual([CalculationEngine performByteSwapWithA:0x12345678], 0x78563412, @"ByteSwap32");
+}
+
+-(void)testInvert
+{
+    XCTAssertEqual([CalculationEngine performInvertWithA:0x55], 0xAA, @"Invert8");
+    XCTAssertEqual([CalculationEngine performInvertWithA:0xAA55], 0x55AA, @"Invert16");
+    XCTAssertEqual([CalculationEngine performInvertWithA:0xAA5500FF], 0x55AAFF00, @"Invert32");
+}
+
 @end
