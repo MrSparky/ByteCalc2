@@ -174,7 +174,7 @@
             break;
         default:
             // TBD - how did we get here?
-            NSLog(@"Set InputMode to Unknown (%d)", inputSelector.selectedSegmentIndex);
+            NSLog(@"Set InputMode to Unknown (%d)", (int)inputSelector.selectedSegmentIndex);
             break;
     }
 }
@@ -196,7 +196,7 @@
             break;
         default:
             // TBD - how did we get here?
-            NSLog(@"Set BitWidth to Unknown (%d)", inputSelector.selectedSegmentIndex);
+            NSLog(@"Set BitWidth to Unknown (%d)", (int)inputSelector.selectedSegmentIndex);
             break;
     }
 }

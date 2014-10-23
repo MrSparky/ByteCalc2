@@ -70,19 +70,19 @@
 {
     if(m_PendingReset)
         [self clearInput];
-    [m_InputString appendString:[NSString stringWithFormat:@"%d", input]];
+    [m_InputString appendString:[NSString stringWithFormat:@"%d", (int)input]];
 }
 
 - (void)appendInputWithLetter:(NSInteger)input
 {
     if(m_PendingReset)
         [self clearInput];
-    [m_InputString appendString:[NSString stringWithFormat:@"%c", 'A' + input]];
+    [m_InputString appendString:[NSString stringWithFormat:@"%c", 'A' + (char)input]];
 }
 
 - (void)setInputValue:(NSInteger)input
 {
-    m_InputString = [NSMutableString stringWithFormat:@"%d", input];
+    m_InputString = [NSMutableString stringWithFormat:@"%d", (int)input];
 }
 
 - (BOOL)hasValue
@@ -114,7 +114,7 @@
     //int barring = pow( 2, 3 );
     //int width = ( sizeof( number ) ) * spacing;
     int binaryDigit = 0;
-    int integer = number;
+    int integer = (int)number;
     
     while( binaryDigit < width )
     {
