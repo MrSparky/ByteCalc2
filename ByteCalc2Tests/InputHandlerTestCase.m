@@ -62,6 +62,10 @@
     XCTAssertEqual([InputHandler integerFromString:@"10" withBase:16], 0x10);
     XCTAssertEqual([InputHandler integerFromString:@"100" withBase:16], 0x100);
     XCTAssertEqual([InputHandler integerFromString:@"123" withBase:16], 0x123);
+    XCTAssertEqual([InputHandler integerFromString:@"4567" withBase:16], 0x4567);
+    XCTAssertEqual([InputHandler integerFromString:@"89AB" withBase:16], 0x89AB);
+    XCTAssertEqual([InputHandler integerFromString:@"CDEF" withBase:16], 0xCDEF);
+    XCTAssertEqual([InputHandler integerFromString:@"0FF0" withBase:16], 0x0FF0);
     XCTAssertEqual([InputHandler integerFromString:@"AA55" withBase:16], 0xAA55);
     
 }
