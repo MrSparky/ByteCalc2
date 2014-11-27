@@ -177,6 +177,10 @@
             NSLog(@"Set InputMode to Unknown (%d)", (int)inputSelector.selectedSegmentIndex);
             break;
     }
+    
+    // Change the current output display to the new Base/Input
+    [m_InputHandler setInputMode:self.InputMode];
+    [ResultScreen setText:m_InputHandler.textValue];
 }
 
 - (IBAction)ResultModeSelected:(id)sender {

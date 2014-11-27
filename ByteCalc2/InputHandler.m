@@ -25,7 +25,7 @@
     self = [super init];
     if(self) {
         m_PendingReset = false;
-        m_InputMode = InputModeDecimal;
+        m_InputMode = InputModeHexidecimal;
         [self clearInput];
     }
     return self;
@@ -38,8 +38,11 @@
 
 - (void)setInputMode:(BCInputMode)mode
 {
-    // TBD - what should we do w/ current input? Convert it or trash it?
+    // Convert the old input string into the new base
+    NSInteger curVal = self.integerValue;
     m_InputMode = mode;
+    
+    m_InputString = [NSMutableString stringWithString:[self getStringForValueInBase:curVal]];
 }
 
 - (void)clearInput
@@ -71,7 +74,8 @@
 {
     if(m_PendingReset)
         [self clearInput];
-    [m_InputString appendString:[NSString stringWithFormat:@"%d", (int)input]];
+    [m_InputString appendString:[self getStringForValueInBase:input]];
+    //[m_InputString appendString:[NSString stringWithFormat:@"%d", (int)input]];
 }
 
 - (void)appendInputWithLetter:(NSInteger)input
@@ -83,7 +87,7 @@
 
 - (void)setInputValue:(NSInteger)input
 {
-    m_InputString = [NSMutableString stringWithFormat:@"%d", (int)input];
+    m_InputString = [NSMutableString stringWithString:[self getStringForValueInBase:input]];
 }
 
 - (BOOL)hasValue
@@ -120,6 +124,21 @@
 - (NSString *)binaryValue
 {
     return [InputHandler binaryStringFromInteger:self.integerValue andWidth:32];
+}
+
+- (NSString*)getStringForValueInBase:(NSInteger)value
+{
+    switch (m_InputMode) {
+        case InputModeOctal:
+            return [NSString stringWithFormat:@"%O", value];
+        case InputModeDecimal:
+            return [NSString stringWithFormat:@"%D", value];
+        case InputModeHexidecimal:
+            return [NSString stringWithFormat:@"%X", value];
+        default:
+            NSLog(@"Unable to convert InputMode to Unknown");
+            return @"*ERR*";
+    }
 }
 
 +(NSString *)binaryStringFromInteger:(NSInteger)number andWidth:(NSInteger)width

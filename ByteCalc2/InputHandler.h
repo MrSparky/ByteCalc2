@@ -39,6 +39,9 @@ typedef enum e_InputMode {
 - (NSString *)binaryValue;
 
 
+-(NSString*) getStringForValueInBase:(NSInteger)value;
+
+
 +(NSString *)binaryStringFromInteger:(NSInteger)number andWidth:(NSInteger)width;
 +(NSInteger)integerFromString:(NSString *)value withBase:(NSInteger)base;
 +(NSInteger)integerFromASCII:(NSString *)value;
