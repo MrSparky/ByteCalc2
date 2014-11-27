@@ -27,6 +27,7 @@
 		EC82A8A119C80F3700FAAED7 /* CalculationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A019C80F3700FAAED7 /* CalculationEngine.m */; };
 		EC82A8A419C814EB00FAAED7 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82A8A319C814EB00FAAED7 /* CalcViewController.m */; };
 		ECE561D019CBCAC80075617D /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE561CF19CBCAC80075617D /* InputHandler.m */; };
+		ECEA59301A1043C4003C4F6C /* InputHandlerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEA592F1A1043C4003C4F6C /* InputHandlerTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EC82A8A319C814EB00FAAED7 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 		ECE561CE19CBCAC80075617D /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		ECE561CF19CBCAC80075617D /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		ECEA592F1A1043C4003C4F6C /* InputHandlerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandlerTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				EC82A89219C53BEE00FAAED7 /* ByteCalc2Tests.m */,
 				EC5B726119DE4F1C00A1736A /* CalcEngineTestCase.m */,
+				ECEA592F1A1043C4003C4F6C /* InputHandlerTestCase.m */,
 				EC82A88D19C53BEE00FAAED7 /* Supporting Files */,
 			);
 			path = ByteCalc2Tests;
@@ -295,6 +298,7 @@
 			files = (
 				EC5B726219DE4F1C00A1736A /* CalcEngineTestCase.m in Sources */,
 				EC82A89319C53BEE00FAAED7 /* ByteCalc2Tests.m in Sources */,
+				ECEA59301A1043C4003C4F6C /* InputHandlerTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

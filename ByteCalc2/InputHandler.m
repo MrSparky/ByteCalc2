@@ -11,6 +11,7 @@
 @interface InputHandler () {
     BCInputMode m_InputMode;
     NSMutableString * m_InputString;
+    NSInteger m_InputValue;
     BOOL m_PendingReset;
 }
 
@@ -92,7 +93,23 @@
 
 - (NSInteger)integerValue
 {
-    return [m_InputString integerValue];
+    NSInteger value;
+    switch (m_InputMode) {
+        case InputModeHexidecimal:
+            value = [InputHandler integerFromString:m_InputString withBase:16];
+            break;
+        case InputModeDecimal:
+        default:
+            value = [m_InputString integerValue];
+            break;
+        case InputModeOctal:
+            value = [InputHandler integerFromString:m_InputString withBase:8];
+            break;
+        case InputModeASCII:
+            
+            break;
+    }
+    return value;
 }
 
 - (NSString *)textValue
@@ -136,5 +153,31 @@
     
     return string;
 }
+
++(NSInteger)integerFromString:(NSString *)value withBase:(NSInteger)base
+{
+    NSInteger intVal = 0;
+    value = [value uppercaseString];
+    
+    for (int i = 0; i < [value length]; i++)
+    {
+        char digit = [value characterAtIndex:([value length] - i) - 1];
+        if(digit <= '9') {
+            intVal += (digit - '0') * pow(base, i);
+        }else{
+            intVal += ((digit - 'A') + 10) * pow(base, i);
+        }
+    }
+    
+    return intVal;
+}
+
++(NSInteger)integerFromASCII:(NSString *)value
+{
+    NSInteger intVal = 0;
+    
+    return intVal;
+}
+
 
 @end
