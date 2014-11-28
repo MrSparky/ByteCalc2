@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *ResultScreen;
 @property (weak, nonatomic) IBOutlet UITextField *BinaryResultScreen;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *InputSelect;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *WidthSelect;
 
 @property (assign) BCInputMode InputMode;
 @property (assign) UInt8 BitWidth;

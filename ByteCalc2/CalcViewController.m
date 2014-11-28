@@ -22,6 +22,8 @@
 
 @synthesize ResultScreen;
 @synthesize BinaryResultScreen;
+@synthesize InputSelect;
+@synthesize WidthSelect;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +51,7 @@
     }else{
         [self clearResultScreen];
     }
+    [self.InputSelect setSelectedSegmentIndex:[self SegmentFromInputMode]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -181,6 +184,21 @@
     // Change the current output display to the new Base/Input
     [m_InputHandler setInputMode:self.InputMode];
     [ResultScreen setText:m_InputHandler.textValue];
+}
+
+- (NSInteger)SegmentFromInputMode {
+    switch (m_InputHandler.inputMode) {
+        case InputModeASCII:
+            return 0;
+        case InputModeHexidecimal:
+            return 1;
+        case InputModeDecimal:
+            return 2;
+        case InputModeOctal:
+            return 3;
+        default:
+            return 0;
+    }
 }
 
 - (IBAction)ResultModeSelected:(id)sender {
